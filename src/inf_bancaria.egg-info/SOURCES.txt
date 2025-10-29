@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/inf_bancaria/__init__.py
+src/inf_bancaria/clean_data.py
+src/inf_bancaria.egg-info/PKG-INFO
+src/inf_bancaria.egg-info/SOURCES.txt
+src/inf_bancaria.egg-info/dependency_links.txt
+src/inf_bancaria.egg-info/top_level.txt
