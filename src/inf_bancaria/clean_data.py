@@ -1,14 +1,11 @@
-def remove_variables(df):
+def remove_variables(df, columns):
     """
     Processes the data frame removing 
     unnecessary columns for the project.
+
+    :param pandas.DataFrame df: A pandas dataframe.
+    :param list columns: A list of columns to be removed.
+    :return pandas.DataFrame: A transformed dataframe
     """
-    columns = ['NUM_SOLICITUD', 'SUCURSAL', 'STATUS_SOLICITUD', 'PUNTO_DECISION',
-       'APROBACION_TC', 'LINEA_CREDITO_FINAL', 'CUENTA_ASIGNADA',
-       'SALDO_CUENTA', 'CAPACIDAD_TC', 'COMPROBANTE_INGRESOS', 
-       'SEGMENTO_CLIENTE', 'CLIENTE_CDE', 'SUMA_LINEAS_REVOLVENTES', 
-       'CAPACIDAD_PAGO_TOTAL','PEOR_MOP_TARJETAS', 'SUMA_SALDOS_TARJETAS', 
-       'SUMA_PAGO_MIN_TARJETAS', 'PEOR_HISTORIA_CREDITO', 'SUMA_SALDOS_TOTAL', 
-       'NUM_CREDITOS',"MESES_VENCIDOS"]
     
     return df.drop(columns, axis=1)

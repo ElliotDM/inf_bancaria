@@ -7,6 +7,14 @@ graphs_dir = Path('../graphs')
 
 
 def distribution(x, y, title):
+    """
+    Draw a bar plot and save it as a png.
+
+    :param pandas.Series x: The x values of the graph.
+    :param pandas.Series y: The y values of the graph.
+    :param str title: The title of the graph.
+    """
+
     fig, ax = plt.subplots()
     ax.bar(x, y, color='skyblue', edgecolor='grey')
 
@@ -18,7 +26,7 @@ def distribution(x, y, title):
     ax.yaxis.set_tick_params(pad=10)
 
     plt.title(title)
-
+    fig.set_size_inches(18.5, 10.5)
     distribution_path = graphs_dir / f"{title}.png"
     plt.savefig(distribution_path)
     
@@ -26,6 +34,13 @@ def distribution(x, y, title):
 
 
 def heatmap(data, title):
+    """
+    Draw a heatmap and save it as a png.
+
+    :param pandas.DataFrame: A pandas dataframe
+    :param str title: Title for the graph.
+    """
+
     fig, ax = plt.subplots()
     im = ax.pcolor(data, cmap='RdBu')
 
@@ -41,6 +56,7 @@ def heatmap(data, title):
     plt.xticks(rotation=90)
     fig.colorbar(im)
     plt.title(title)
+    fig.set_size_inches(18.5, 10.5)
 
     heatmap_path = graphs_dir / f"{title}.png"
     plt.savefig(heatmap_path)
@@ -49,6 +65,14 @@ def heatmap(data, title):
 
 
 def scatter(x, y, title):
+    """
+    Draw a scatter plot and save it as a png.
+
+    :param pandas.Series x: The x values of the graph.
+    :param pandas.Series y: The y values of the graph.
+    :param str title: The title of the graph.
+    """
+
     fig, ax = plt.subplots()
     ax.scatter(x, y, color='skyblue', edgecolor='grey')
 
@@ -60,6 +84,7 @@ def scatter(x, y, title):
     ax.yaxis.set_tick_params(pad=10)
 
     plt.title(title)
+    fig.set_size_inches(18.5, 10.5)
 
     distribution_path = graphs_dir / f"{title}.png"
     plt.savefig(distribution_path)
